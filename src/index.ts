@@ -48,10 +48,6 @@ app.post("/identify", async (req, res) => {
       });
     }
 
-    let secondaryContact = contacts.find(
-      (c) => c.linkPrecedence === "secondary" && c.linkedId === primaryContact?.id
-    );
-
   
     if (
       !contacts.some((c) => c.email === email && c.phoneNumber === phoneNumber)
